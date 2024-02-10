@@ -1,6 +1,10 @@
 // import React from 'react'
 
-export default function Dashboard() {
+import { fetchRevenue } from '../lib/data';
+
+export default async function Dashboard() {
+	const revenue = await fetchRevenue();
+	console.log(revenue)
   return (
 	<div>
 	  dashboard
